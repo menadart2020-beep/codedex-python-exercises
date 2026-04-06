@@ -1,0 +1,92 @@
+# first we need to do import to random to let computer choice a word.
+import random
+# ascii we can import in github 
+ascii_hungman = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+# I creat my list of words
+words = ["kenza", "menad", "ameziane"]
+# Let the computer randomly choose a word from the list
+computer_choice = random.choice(words)
+# Here I create spaces that will later be replaced by letters.
+# I multiply "_" by the length of the word to create the hidden word.
+# We could also use a for loop, but I prefer this method because it is shorter.
+
+display = ["_"] * len(computer_choice)
+
+print(ascii_hungman[0])
+# Print the initial state of the word
+print("".join(display))
+# Set the number of allowed incorrect guesses (lives)
+lives = 6
+# Main game loop: continue until the player has guessed all letters or runs
+while "_" in display and lives > 0 :
+  # Ask the player to guess a letter
+   guess = input("guess a letter : ").lower()
+
+  # Initialize a flag to check if the guessed letter is in the word
+   found = False
+   # Replace underscores with the guessed letter if it exists in the word
+   for letter in range (len(computer_choice)):
+     if computer_choice[letter] == guess:
+        display[letter] = guess
+        found = True
+       # If the letter was not found, decrease a life
+   if not found :
+     lives -= 1
+     print(ascii_hungman [6- lives])
+     print("wrong letter")
+     print(f"lives left {lives}")
+   print("".join(display))
+  # Check the end game conditions
+if "_" not in display:
+  print("you win")
+else :
+  print("game over")
