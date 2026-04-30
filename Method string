@@ -1,0 +1,78 @@
+# ************
+#***Method string *****
+#******************
+# len()
+a = 'i love python'
+print(len(a))# the give length of string >= 13
+
+#strip()
+A = '   i love python   '
+print(A.strip())# remove the space >= 'i love python'
+print(A.rstrip())# remove the space >= 'i love python   ' 
+print(A.lstrip())# remove the space >= '   i love python'
+
+#title()
+b = 'i love python and 3d'
+print(b.title())# the first letter capital >= I Love Python 3D
+
+#capitalize()
+B = 'i love pyhton and 3d'
+print(B.capitalize())# the first be capital >= I love python 3d
+
+#upper()
+c = ' i love python'
+print(c.upper())# all become capital >= I LOVE PYTHON
+
+#lower()
+C = 'i love python'
+print(C.lower())# all become lower >= i love python
+
+#split()
+d = 'i love python'
+print(d.split('_'))
+print(d.rsplit('_'))
+
+#statswith
+D= 'i love python'
+print(D.startswith('i',1))
+
+#endswith
+e = 'i love python'
+print(e.endswith('e',6))
+
+#count()
+E= 'i love python'
+print(E.count('o'))
+
+#swapcase
+g = 'i LOve PYthon'
+print(g.swapcase())
+
+#center()
+G= 'i love python'
+print(G.center(15,'#'))
+
+# idex(substring,start,end)
+h = 'i love python'
+print(h.index('p'))
+#print(h.index('p',0, 5)) #through Error
+
+#find(substring,start,end)
+H = 'i love python'
+print(H.index('p'))
+print(H.find('p',0,5)) # -1
+
+# rjust() ljust()
+i = 'kenza'
+print(i.rjust(10))
+print(i.rjust(10,'#'))# >='     kenza'
+
+I = 'kenza'
+print(I.rjust(10))
+print(I.rjust(10,'#'))# >= 'kenza     '
+
+#splitlines()
+k ='''i love python
+is easy
+for me'''
+print(k.splitlines())
