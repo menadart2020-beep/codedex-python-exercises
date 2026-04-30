@@ -1,0 +1,32 @@
+#***************
+#***string formating***
+#********************
+
+#placeholder
+name = 'ameziane'
+age = 44
+number = 0.9870
+print('his name is : %s his age is : %d and his number is : %f'%(name, age, number))
+# %s >= string
+# %d >= digit
+# %f >= float
+
+# control floating point number
+myNumber = 10
+print('my number is :%f'%(myNumber)) # >= 10.000000
+print('my number is :%.2f'%(myNumber))# >= 10.00
+
+# format()
+name = 'kenza'
+age = 34
+wigth = 66.70
+print('my name is :{:s} my age is: {:d} my wigth is: {:f}'.format(name,age,wigth))
+
+#{:s}>= string
+#{:d} >= digit
+#{:f} >= float
+
+#format in version 3.6 +
+name = ' kenza'
+age = 34
+print(f'my name is :{name} and my age is : {age}')
